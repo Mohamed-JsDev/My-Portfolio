@@ -55,7 +55,7 @@ const VantaBackground = ({ children }) => {
   return (
     <div
       ref={vantaRef}
-      style={{ width: "100%", height: "100vh", position: "relative" }}
+      style={{ width: "100%", height: "99.9vh", position: "relative" }}
     >
       {children}
     </div>

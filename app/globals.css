@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
+  --main-color: #155dfc;
   --light-bg: #f9fafb;
-  --light-main: #3b82f6;
   --light-second: #64748b;
   --light-text: #0f172a;
   --light-span: #475569;
   --light-borders: #e2e8f0;
   /* dark colors  */
   --dark-bg: #0f172a;
-  --dark-main: #60a5fa;
   --dark-second: #cbd5e1;
   --dark-text: #f8fafc;
-  --dark-span: #94a3b8;
+  --dark-span: #a7b1be;
   --dark-borders: #1e293b;
+  --dark-border: #041735;
 }
 .open-animation div {
   animation: openFromCenter 5s ease-in-out forwards;
@@ -49,4 +49,19 @@
 }
 .trans-theme {
   @apply transition-all duration-700 ease-in-out;
+}
+.media {
+  box-shadow: inset 0 0 0 9px rgb(225 225 225/ 0.4);
+  animation: profile__animation 5s ease-in-out infinite;
+}
+@keyframes profile__animation {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }
