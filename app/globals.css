@@ -15,6 +15,9 @@
   --dark-borders: #1e293b;
   --dark-border: #041735;
 }
+body {
+  font-family: var(--font-poppins), sans-serif;
+}
 .open-animation div {
   animation: openFromCenter 5s ease-in-out forwards;
   transform-origin: center;

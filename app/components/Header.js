@@ -31,13 +31,13 @@ export default function Header() {
               <Link href="./Experience">Experience</Link>
             </li>
             <li className="trans-theme  hover:scale-110  hover:text-[var(--main-color)]">
-              <Link href="./Experience">Skills</Link>
+              <Link href="./Skills">Skills</Link>
             </li>
             <li className="trans-theme  hover:scale-110  hover:text-[var(--main-color)]">
               <Link href="./Projects">Projects</Link>
             </li>
             <li className="trans-theme  hover:scale-110  hover:text-[var(--main-color)]">
-              <Link href="./Projects">Contact</Link>
+              <Link href="./Contact">Contact</Link>
             </li>
           </ul>
         </nav>

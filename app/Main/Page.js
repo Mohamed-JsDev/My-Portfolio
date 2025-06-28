@@ -16,7 +16,7 @@ export default function Main() {
         <div>
           <h2 className={`text-4xl`}>
             Hi, I'm <br />
-            <span className="pt-5 poppins  text-[var(--main-color)] font-bold text-7xl text-shadow-2xs text-shadow-white">
+            <span className="pt-5 poppins  text-[var(--main-color)] font-bold text-6xl text-shadow-2xs text-shadow-white">
               {" "}
               Mohamed Alshafe
             </span>{" "}

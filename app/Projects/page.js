@@ -1,23 +1,51 @@
-import TimelineItem from "../components/TimelineItem";
+"use client";
+import ProjectCard from "../components/ProjectCard";
+import { useState } from "react";
+import { projects } from "../data/Projects";
 
+const categories = ["All", "HTML", "CSS", "JavaScript", "React", "Next.js"];
 export default function Projects() {
+  const [active, setActive] = useState("All");
+  const filtered =
+    active === "All"
+      ? projects
+      : projects.filter((p) => p.tech.includes(active));
   return (
-    <div className=" px-8 flex justify-center align-center w-screen">
+    <section
+      id="projects"
+      className=" px-8 flex justify-center align-center w-screen"
+    >
       <div className=" w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-8 shadow-2xl shadow-black   z-50 rounded-lg">
-        <p className=" text-center text-[var(--main-color)] text-2xl font-semibold border-x-2 border-[var(--main-color)]  rounded-lg sticky  top-0 left-2  w-full bg-white p-4 z-60 shadow-2xl shadow-black">
-          MOhamed Alshafe{" "}
-        </p>
-        <div className="text-center min-h-full   lg:pt-8 lg:p-4 flex flex-wrap items-center flex-col   justify-between  ">
-          <div className="w-full ">
-            <ul className="flex space-x-4 items-center justify-center">
-              <li>Next</li>
-              <li>react</li>
-              <li>javaScript</li>
-              <li>CSS,Html</li>
-            </ul>
-          </div>
+        <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-white mb-8">
+          My Projects
+        </h2>
+
+        {/* الفلاتر */}
+        <div className="flex justify-center gap-4 mb-10 flex-wrap">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActive(cat)}
+              className={`px-4 py-2 rounded-full font-medium
+                ${
+                  active === cat
+                    ? "bg-blue-600 text-white"
+                    : "bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-300"
+                }
+              `}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* شبكة كروت المشاريع */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((proj, i) => (
+            <ProjectCard key={i} {...proj} />
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
