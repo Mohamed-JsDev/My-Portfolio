@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import { useState } from "react";
 import { projects } from "../data/Projects";
 
-const categories = ["All", "HTML", "CSS", "JavaScript", "React", "Next.js"];
+const categories = ["All", "Next.js", "React", "JavaScript", "HTML"];
 export default function Projects() {
   const [active, setActive] = useState("All");
   const filtered =
@@ -16,12 +16,11 @@ export default function Projects() {
       className=" px-8 flex justify-center align-center w-screen"
     >
       <div className=" w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-8 shadow-2xl shadow-black   z-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-white mb-8">
+        <h2 className="text-3xl font-bold text-center text-[var(--main-color)] mb-8">
           My Projects
         </h2>
 
-        {/* الفلاتر */}
-        <div className="flex justify-center gap-4 mb-10 flex-wrap">
+        <div className="flex justify-center gap-4 mb-10 flex-wrap ">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -34,17 +33,29 @@ export default function Projects() {
                 }
               `}
             >
-              {cat}
+              {cat === "HTML" || cat === "CSS" ? "HTML & CSS" : cat}
             </button>
           ))}
         </div>
 
-        {/* شبكة كروت المشاريع */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filtered.map((proj, i) => (
             <ProjectCard key={i} {...proj} />
           ))}
         </div>
+        <button
+          type="text"
+          className=" flex justify-center w-full text-center  "
+        >
+          {" "}
+          <a
+            href="https://github.com/Mohamed-JsDev/"
+            target="_blank"
+            className="mt-4 bg-white  px-4 py-2 rounded-lg text-2xl font-semibold text-[var(--main-color)] hover:scale-110 shadow-lg shadow-black "
+          >
+            view more
+          </a>
+        </button>
       </div>
     </section>
   );
