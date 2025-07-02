@@ -26,7 +26,7 @@ export default function About() {
           } }`}
         >
           <Image
-            src={imagePath}
+            src="/image"
             alt="media"
             width={250}
             height={200}
