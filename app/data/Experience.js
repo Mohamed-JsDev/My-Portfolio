@@ -71,6 +71,6 @@ export const experience = [
       "Tailwind CSS",
     ],
     certification:
-      "https://drive.google.com/file/d/11pZRFul9gwrL5QDV46Jkx9e5OXvorbrQ/view?usp=sharing",
+      "https://drive.google.com/file/d/1-W_fZKc1qBZKPwtcmpLVGwF3iKTce33_/view?usp=sharing",
   },
 ];
