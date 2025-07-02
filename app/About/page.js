@@ -3,7 +3,7 @@ import Image from "next/image";
 import Icons, { Back, Next } from "../components/icons";
 import { useTheme } from "../context/ThemeContext";
 import { Blocks, Lightbulb, Mail, MapPinCheck, Zap } from "lucide-react";
-
+import imagePath from "/public/Image_22.png";
 export default function About() {
   const { theme } = useTheme();
   return (
@@ -26,7 +26,7 @@ export default function About() {
           } }`}
         >
           <Image
-            src="/Image_22.png"
+            src={imagePath}
             alt="media"
             width={250}
             height={200}
@@ -42,19 +42,19 @@ export default function About() {
             : 6th of October
           </p>
           <Icons />
-          <button
-            className={` w-full p-2  rounded-2xl  transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
+          <a href="https://wa.me/201032721974" target="_blank">
+            <button
+              className={` w-full p-2  rounded-2xl  transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
     ${
       theme === "light"
         ? "bg-gradient-to-l from-[var(--light-span)] to-[var(--dark-span)]  hover:text-[var(--dark-text)] hover:transition-all hover:duration-500 hover:shadow-black hover:border-white"
         : "bg-gradient-to-l from-blue-500 to-indigo-950 text-white  hover:shadow-white hover:transition-all hover:duration-500 "
     }`}
-          >
-            <a href="https://wa.me/201032721974" target="_blank">
+            >
               {" "}
               Get in Touch
-            </a>
-          </button>
+            </button>
+          </a>
         </section>
         {/* INTRO */}
         <section
@@ -135,21 +135,22 @@ export default function About() {
             growth comes from building, debugging, and helping others along the
             way.
           </p>
-          <button
-            className={` text-2xl p-2 me-2 rounded-2xl w-full transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
+          <a
+            className="w-full"
+            href="https://drive.google.com/file/d/1pbvDiQlOBGM58LYLPdHz7D2chb-UpFJP/view?usp=sharing"
+            target="_blank"
+          >
+            <button
+              className={` text-2xl p-2 me-2 rounded-2xl w-full transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
     ${
       theme === "light"
         ? "bg-gradient-to-l from-blue-500 to-indigo-950 text-white hover:bg-transparent hover:bg-clip-text hover:text-transparent hover:from-blue-500 hover:to-indigo-950 hover:shadow-black hover:transition-all hover:duration-500 "
         : "bg-gradient-to-l from-[var(--light-span)] to-[var(--dark-span)] | hover:transition-all hover:duration-500 hover:shadow-white  hover:border-white"
     }`}
-          >
-            <a
-              href="https://drive.google.com/file/d/1pbvDiQlOBGM58LYLPdHz7D2chb-UpFJP/view?usp=sharing"
-              target="_blank"
             >
               Download CV
-            </a>
-          </button>
+            </button>
+          </a>
         </section>
         <div className="absolute bottom-10 left-30">
           <Back back="/" />
