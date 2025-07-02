@@ -43,7 +43,12 @@ export default function Main() {
         : "bg-gradient-to-l from-[var(--light-span)] to-[var(--dark-span)] | hover:transition-all hover:duration-500 hover:shadow-white  hover:border-white"
     }`}
             >
-              Download CV
+              <a
+                href="https://drive.google.com/file/d/1ZW9skNjXaEydpLxeLQGw8sijBGPn3SOG/view?usp=sharing"
+                target="_blank"
+              >
+                Download CV
+              </a>
             </button>
             <button
               className={`p-2 me-2 rounded-2xl w-2/5 transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
@@ -54,7 +59,9 @@ export default function Main() {
     }`}
             >
               {" "}
-              Get in Touch
+              <a href="https://wa.me/201032721974" target="_blank">
+                Get in Touch
+              </a>
             </button>
           </div>
           <div className="pt-10">
