@@ -66,7 +66,7 @@ export default function About() {
         >
           <ul className="flex max-sm:gap-4 gap-10 w-full justify-center-safe pb-5  lg:pb-10 text-white  text-shadow-2xs text-shadow-white ">
             <li
-              className={` text-sm max-sm:px-4 py-5 px-10  rounded  shadow-2xl shadow-black  ${
+              className={` text-sm max-sm:px-4 py-3 px-10  rounded  shadow-2xl shadow-black  ${
                 theme === "light"
                   ? "text-[var(--light-span)]"
                   : "text-[var(--dark-text)] "
@@ -119,10 +119,10 @@ export default function About() {
             </li>
           </ul>
           <p
-            className={`pb-5 text-md mb-2  ${
+            className={`pb-5 text-sm mb-2 p-px  ${
               theme === "light"
                 ? "text-[var(--light-text)]"
-                : "text-[var(--dark-text)]"
+                : "text-[var(--dark-text)] bg-[var(--dark-bg)]"
             }`}
           >
             I'm a self-driven Egyptian Frontend Developer who enjoys building
