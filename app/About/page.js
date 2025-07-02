@@ -3,9 +3,9 @@ import Image from "next/image";
 import Icons, { Back, Next } from "../components/icons";
 import { useTheme } from "../context/ThemeContext";
 import { Blocks, Lightbulb, Mail, MapPinCheck, Zap } from "lucide-react";
-import imagePath from "/public/Image_22.png";
 export default function About() {
   const { theme } = useTheme();
+  const path = "/image_22.png";
   return (
     <div className=" px-6 pb-8  h-full  ">
       <div className=" text-center  h-full pb-20 lg:pb-24  lg:pt-8 lg:p-4 flex flex-wrap gap-2  items-center flex-col md:flex-row  md:justify-between lg:justify-around shadow-2xl shadow-black   z-50 ">
@@ -26,7 +26,7 @@ export default function About() {
           } }`}
         >
           <Image
-            src="/image"
+            src={path}
             alt="media"
             width={250}
             height={200}

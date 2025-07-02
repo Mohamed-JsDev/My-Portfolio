@@ -18,7 +18,7 @@ export const projects = [
   {
     title: "Tic Tac Toe",
     description: "Tic Tac Toe game built with react.",
-    tech: ["react", "tailwindcss"],
+    tech: ["React", "Tailwindcss"],
     image: "Tic_Toc_Toe.png",
     demo: "https://tic-tac-toe-blush-zeta-70.vercel.app/",
     github: "https://github.com/Mohamed-JsDev/Tic-Tac-Toe",

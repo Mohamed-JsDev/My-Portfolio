@@ -23,14 +23,14 @@ export default function ProjectCard({
   image,
 }) {
   return (
-    <div className=" text-white bg-zinc-900 p-4 rounded-xl shadow-md shadow-black hover:shadow-lg transition flex flex-col ">
+    <div className="group text-white bg-zinc-900 p-4 rounded-xl shadow-md shadow-black hover:shadow-lg transition flex flex-col ">
       <div className="relative w-full h-40 rounded-lg overflow-hidden mb-4">
         <Image
           src={`/images/${image}`}
           alt={title}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           fill
-          className="object-cover"
+          className="group-hover:scale-115 object-cover"
         />
       </div>
       <h3 className="text-lg font-semibold text-white">{title}</h3>

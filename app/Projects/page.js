@@ -34,12 +34,12 @@ export default function Projects() {
                 }
               `}
             >
-              {cat === "HTML" || cat === "CSS" ? "HTML & CSS" : cat}
+              {cat === "HTML" ? "HTML & CSS" : cat}
             </button>
           ))}
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 odd:bg-white">
           {filtered.map((proj, i) => (
             <ProjectCard key={i} {...proj} />
           ))}
