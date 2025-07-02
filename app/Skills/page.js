@@ -1,4 +1,5 @@
 "use client";
+import { Back, Next } from "../components/icons";
 import { useTheme } from "../context/ThemeContext";
 
 const skillsData = [
@@ -40,6 +41,12 @@ export default function Skills() {
               icon={skill.icon}
             />
           ))}
+        </div>
+        <div className="absolute bottom-10 left-30">
+          <Back back="Experience" />
+        </div>
+        <div className="absolute bottom-10 right-30">
+          <Next next="Projects" />
         </div>
       </div>
     </section>

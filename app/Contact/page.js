@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
-import Icons from "../components/icons";
+import Icons, { Back } from "../components/icons";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ export default function Contact() {
       id="contact"
       className="px-8 flex justify-center align-center w-screen "
     >
-      <div className="container mx-auto px-4 w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-8 shadow-2xl shadow-black   z-50 rounded-lg">
+      <div className="container mx-auto  w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-8 shadow-2xl shadow-black   z-50 rounded-lg">
         <h2
           className={`text-3xl md:text-4xl font-bold text-center mb-12  ${
             theme === "light" ? "text-gray-800" : "text-white"
@@ -179,6 +179,10 @@ export default function Contact() {
               </button>
             </form>
           </div>
+        </div>
+
+        <div className="absolute bottom-10 left-30">
+          <Back back="Projects" />
         </div>
       </div>
     </section>

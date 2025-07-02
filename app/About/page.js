@@ -12,13 +12,11 @@ export default function About() {
         {/* CRAD INFO */}
         <h1
           className={`  pb-4 w-full  text-4xl font-semibold capitalize ${
-            theme === "light"
-              ? "text-[var(--main-color)]"
-              : " text-[var(--main-color)] text-shadow-2xs text-shadow-black  "
+            theme === "light" ? "text-gray-800" : "text-white"
           } `}
         >
           {" "}
-          my introduction
+          My <span className="text-[var(--main-color)]">Introduction</span>
         </h1>
         <section
           className={`  px-2 w-fit  rounded  shadow-2xl shadow-black py-5 font-semibold text-start flex-col justify-center items-center    ${

@@ -2,6 +2,7 @@
 import ProjectCard from "../components/ProjectCard";
 import { useState } from "react";
 import { projects } from "../data/Projects";
+import { Back, Next } from "../components/icons";
 
 const categories = ["All", "Next.js", "React", "JavaScript", "HTML"];
 export default function Projects() {
@@ -56,6 +57,12 @@ export default function Projects() {
             view more
           </a>
         </button>
+        <div className="absolute bottom-10 left-30">
+          <Back back="Skills" />
+        </div>
+        <div className="absolute bottom-10 right-30">
+          <Next next="Contact" />
+        </div>
       </div>
     </section>
   );
