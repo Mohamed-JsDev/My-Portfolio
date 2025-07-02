@@ -1,35 +1,76 @@
+"use client";
+import { useTheme } from "../context/ThemeContext";
+
+const skillsData = [
+  { name: "HTML5", level: 90, icon: "/icons/html5.svg" },
+  { name: "CSS3", level: 85, icon: "/icons/css.svg" },
+  { name: "JavaScript", level: 80, icon: "/icons/javascript.svg" },
+  { name: "React", level: 85, icon: "/icons/react.svg" },
+  { name: "Redux", level: 80, icon: "/icons/redux.svg" },
+  { name: "Tailwind CSS", level: 90, icon: "/icons/tailwindcss.svg" },
+  { name: "bootstrap ", level: 85, icon: "/icons/bootstrap.svg" },
+  { name: "next.js", level: 75, icon: "/icons/next.svg" },
+  { name: "Git", level: 80, icon: "/icons/git.svg" },
+  { name: "TypeScript", level: 70, icon: "/icons/typescript.svg" },
+];
+
 export default function Skills() {
+  const { theme } = useTheme();
+
   return (
-    <div className=" m-50 ">
-      <section id="skills" className="skills-section">
-        <div className="container">
-          <h2 className="section-title">
-            My <span>Skills</span>
-          </h2>
+    <section
+      id="skills"
+      className="px-8 flex justify-center align-center w-screen"
+    >
+      <div className="container mx-auto  w-5/6 h-[calc(100vh-105px)] overflow-y-auto pb-4 px-8 shadow-2xl shadow-black z-50 rounded-lg">
+        <h2
+          className={`text-3xl md:text-4xl font-bold text-center mb-12 ${
+            theme === "light" ? "text-gray-800" : "text-white"
+          }`}
+        >
+          My <span className="text-[var(--main-color)]">Skills</span>
+        </h2>
 
-          <div className="skills-grid">
-            <div className="skill-card">
-              <div className="skill-icon">
-                <i className="devicon-html5-plain colored"></i>
-              </div>
-              <h3>HTML5</h3>
-              <div className="skill-progress">
-                <div className="progress-bar w-11/12 bg-[#E44D26]"></div>
-              </div>
-            </div>
-
-            <div className="skill-card">
-              <div className="skill-icon">
-                <i className="devicon-css3-plain colored"></i>
-              </div>
-              <h3>CSS3</h3>
-              <div className="skill-progress">
-                <div className="progress-bar bg-[#264DE4;] w-5/6"></div>
-              </div>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillsData.map((skill, index) => (
+            <SkillCard
+              key={index}
+              name={skill.name}
+              level={skill.level}
+              icon={skill.icon}
+            />
+          ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
+
+const SkillCard = ({ name, level, icon }) => {
+  return (
+    <div className="bg-[var(--dark-bg)] p-6 rounded-xl shadow-lg hover:shadow-[var(--main-color)] transition-all duration-300">
+      <div className="flex items-center mb-4">
+        <div className="bg-purple-100  p-2 rounded-full mr-4">
+          <img
+            src={icon}
+            alt={name}
+            className="w-6 h-6"
+            onError={(e) => {
+              e.target.src = "/icons/default.svg"; // أيقونة افتراضية إذا لم توجد
+            }}
+          />
+        </div>
+        <h3 className="text-xl font-semibold text-white">{name}</h3>
+      </div>
+      <div className="w-full bg-gray-700 rounded-full h-2.5">
+        <div
+          className="bg-[var(--main-color)] h-2.5 rounded-full"
+          style={{ width: `${level}%` }}
+        ></div>
+      </div>
+      <span className="text-gray-300 text-sm mt-2 block text-right">
+        {level}%
+      </span>
+    </div>
+  );
+};
