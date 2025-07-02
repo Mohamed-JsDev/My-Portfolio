@@ -44,7 +44,7 @@ export default function Main() {
     }`}
             >
               <a
-                href="https://drive.google.com/file/d/1ZW9skNjXaEydpLxeLQGw8sijBGPn3SOG/view?usp=sharing"
+                href="https://drive.google.com/file/d/1pbvDiQlOBGM58LYLPdHz7D2chb-UpFJP/view?usp=sharing"
                 target="_blank"
               >
                 Download CV

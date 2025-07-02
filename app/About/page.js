@@ -28,11 +28,11 @@ export default function About() {
           } }`}
         >
           <Image
-            className="bg-[var(--main-color)] rounded mb-2 "
-            width={250}
-            height={200}
             src="/Image_22.png"
             alt="media"
+            width={250}
+            height={200}
+            className="bg-[var(--main-color)] rounded mb-2"
           />
           <h3>Mohamed Saied Alshafe </h3>
           <p className="flex text-sm text-gray-400 text-shadow-2xs text-shadow-black  ">
@@ -52,8 +52,10 @@ export default function About() {
         : "bg-gradient-to-l from-blue-500 to-indigo-950 text-white  hover:shadow-white hover:transition-all hover:duration-500 "
     }`}
           >
-            {" "}
-            Get in Touch
+            <a href="https://wa.me/201032721974" target="_blank">
+              {" "}
+              Get in Touch
+            </a>
           </button>
         </section>
         {/* INTRO */}
@@ -79,7 +81,7 @@ export default function About() {
                 }`}
               >
                 <Zap className="text-amber-400 " size={30} />
-                +8
+                +9
               </p>
               projects{" "}
             </li>
@@ -119,16 +121,21 @@ export default function About() {
             </li>
           </ul>
           <p
-            className={`pb-5 text-xl mb-4  ${
+            className={`pb-5 text-md mb-2  ${
               theme === "light"
                 ? "text-[var(--light-text)]"
                 : "text-[var(--dark-text)]"
             }`}
           >
-            My name is Mohamed Tarek, a Frontend developer; with extensive
-            knowledge and experience in web development and learning new
-            technologies; my favorite language is javascript. I create web pages
-            with UI / UX user interface .
+            I'm a self-driven Egyptian Frontend Developer who enjoys building
+            meaningful, user-focused web applications. I paused my academic path
+            to fully commit to learning and creating through real-world
+            projects. Since joining ALX in early 2023, I've worked in agile-like
+            teams, tackling challenges from scratch and learning deeply through
+            practice. I find joy in transforming ideas into interactive
+            experiences using JavaScript, React, and modern web tools. For me,
+            growth comes from building, debugging, and helping others along the
+            way.
           </p>
           <button
             className={` text-2xl p-2 me-2 rounded-2xl w-full transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
@@ -138,7 +145,12 @@ export default function About() {
         : "bg-gradient-to-l from-[var(--light-span)] to-[var(--dark-span)] | hover:transition-all hover:duration-500 hover:shadow-white  hover:border-white"
     }`}
           >
-            Download CV
+            <a
+              href="https://drive.google.com/file/d/1pbvDiQlOBGM58LYLPdHz7D2chb-UpFJP/view?usp=sharing"
+              target="_blank"
+            >
+              Download CV
+            </a>
           </button>
         </section>
         <div className="absolute bottom-10 left-30">

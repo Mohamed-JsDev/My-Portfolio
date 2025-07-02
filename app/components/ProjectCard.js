@@ -23,7 +23,7 @@ export default function ProjectCard({
   image,
 }) {
   return (
-    <div className="bg-white dark:bg-zinc-900 p-4 rounded-xl shadow-md hover:shadow-lg transition hover:scale-105 flex flex-col ">
+    <div className=" text-white bg-zinc-900 p-4 rounded-xl shadow-md shadow-black hover:shadow-lg transition flex flex-col ">
       <div className="relative w-full h-40 rounded-lg overflow-hidden mb-4">
         <Image
           src={`/images/${image}`}
@@ -33,12 +33,8 @@ export default function ProjectCard({
           className="object-cover"
         />
       </div>
-      <h3 className="text-lg font-semibold text-zinc-800 dark:text-white">
-        {title}
-      </h3>
-      <p className="text-sm text-zinc-600 dark:text-zinc-300 my-2">
-        {description}
-      </p>
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <p className="text-sm text-zinc-300 my-2">{description}</p>
       <div className="flex flex-wrap gap-2 mb-4  w-fit  space-x-2  ">
         {tech.map((t) => {
           const iconSrc = techIcons[t];
@@ -70,7 +66,7 @@ export default function ProjectCard({
           <a
             href={github}
             target="_blank"
-            className="flex items-center text-zinc-800 dark:text-white hover:underline hover:scale-110 "
+            className="flex items-center  hover:underline hover:scale-110 "
           >
             <Github size={16} /> Code
           </a>
