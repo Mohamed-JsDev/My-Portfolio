@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useTheme } from "../context/ThemeContext";
-import Icons, { Back, Next } from "../components/icons";
+import Icons, { Next } from "../components/icons";
 export default function Main() {
   const { theme, setTheme } = useTheme();
   return (
-    <main className=" w-full lg:pb-15 flex items-center flex-col-reverse lg:flex-row  md:justify-between   ">
+    <main className=" w-full lg:pb-10 flex items-center flex-col-reverse lg:flex-row  md:justify-between   ">
       <section
         className={`w-full lg:w-1/2  rounded pt-10 font-semibold text-start   ${
           theme === "light"

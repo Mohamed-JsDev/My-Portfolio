@@ -7,8 +7,8 @@ export default function About() {
   const { theme } = useTheme();
   const path = "/image_22.png";
   return (
-    <div className=" px-6 pb-8  h-full  ">
-      <div className=" text-center  h-full pb-20 lg:pb-24  lg:pt-8 lg:p-4 flex flex-wrap gap-2  items-center flex-col md:flex-row  md:justify-between lg:justify-around shadow-2xl shadow-black   z-50 ">
+    <div className=" px-4 pb-8  h-full  ">
+      <div className=" text-center  h-full pb-18   lg:pt-8 lg:p-4 flex flex-wrap gap-2  items-center flex-col md:flex-row  md:justify-between lg:justify-around shadow-2xl shadow-black   z-50 ">
         {/* CRAD INFO */}
         <h1
           className={`  pb-4 w-full  text-4xl font-semibold capitalize ${
@@ -152,10 +152,10 @@ export default function About() {
             </button>
           </a>
         </section>
-        <div className="absolute bottom-10 left-30">
+        <div className="absolute  -bottom-10 left-30">
           <Back back="/" />
         </div>
-        <div className="absolute bottom-10 right-30">
+        <div className="absolute -bottom-10 right-30">
           <Next next="Experience" />
         </div>
       </div>
