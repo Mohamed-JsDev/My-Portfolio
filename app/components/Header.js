@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const { theme, toggleTheme = () => {} } = useTheme() || {};
@@ -20,7 +21,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="z-100 w-full flex justify-center mb-4">
+    <header className="z-100 w-full flex justify-center mb-4 relative">
       <div
         className={`w-full lg:px-6 flex justify-between items-center z-20 rounded-2xl inset-shadow-xs inset-shadow-black ${
           theme === "dark"
@@ -82,28 +83,36 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Nav Drawer */}
-      {isOpen && (
-        <nav className="absolute top-16 left-0 w-full bg-[var(--dark-bg)] md:hidden shadow-lg rounded-b-2xl">
-          <ul className="flex flex-col gap-4 p-6 text-lg font-semibold">
-            {navLinks.map((link) => (
-              <li key={link.path}>
-                <Link
-                  href={link.path}
-                  className={
-                    pathname === link.path
-                      ? "text-[var(--main-color)]"
-                      : "hover:text-[var(--main-color)]"
-                  }
-                  onClick={() => setIsOpen(false)} // يغلق المنيو بعد الضغط
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      {/* Mobile Nav Drawer with Animation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-16 left-0 w-full bg-[var(--dark-bg)] md:hidden shadow-lg rounded-b-2xl"
+          >
+            <ul className="flex flex-col gap-4 p-6 text-lg font-semibold">
+              {navLinks.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    href={link.path}
+                    className={
+                      pathname === link.path
+                        ? "text-[var(--main-color)]"
+                        : "hover:text-[var(--main-color)]"
+                    }
+                    onClick={() => setIsOpen(false)} // يقفل المنيو بعد الضغط
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
