@@ -14,16 +14,16 @@ export default function Main() {
         } }`}
       >
         <div>
-          <h2 className={`text-4xl`}>
+          <h2 className="text-xl md:text-4xl ">
             Hi, I'm <br />
-            <span className="pt-5 poppins  text-[var(--main-color)] font-bold text-6xl text-shadow-2xs text-shadow-white">
+            <span className="pt-5 poppins  text-[var(--main-color)] font-bold text-3xl md:text-6xl text-shadow-2xs text-shadow-white">
               {" "}
               Mohamed Alshafe
             </span>{" "}
           </h2>
-          <p className="text-3xl pt-5">Front-end Developer</p>
+          <p className="text:xl md:text-3xl pt-5">Front-end Developer</p>
           <p
-            className={`text-2xl mt-2  ${
+            className={`text-lg md:text-2xl mt-2  ${
               theme === "light"
                 ? "text-[var(--light-second)]"
                 : "text-[var(--dark-text)] bg-[var(--dark-bg)] opacity-75 rounded-lg text-shadow-2xs  text-shadow-black "
@@ -34,9 +34,9 @@ export default function Main() {
             interfaces of the future with JavaScript... From React to Next.js, I
             create unforgettable experiences."
           </p>
-          <div className="mt-8  flex  w-full gap-2 text-2xl">
+          <div className="mt-8  flex  w-full gap-2 text-sm md:text-2xl">
             <button
-              className={`p-2 me-2 rounded-2xl w-2/5 transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
+              className={`p-1 md:p-2 me-2 rounded-2xl w-2/5 transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
     ${
       theme === "light"
         ? "bg-gradient-to-l from-blue-500 to-indigo-950 text-white hover:bg-transparent hover:bg-clip-text hover:text-transparent hover:from-blue-500 hover:to-indigo-950 hover:shadow-black hover:transition-all hover:duration-500 "
@@ -79,7 +79,7 @@ export default function Main() {
         />
       </section>
 
-      <div className="absolute bottom-3 right-30">
+      <div className="absolute bottom-3 right-8 md:right-30">
         <Next next="About" />
       </div>
     </main>

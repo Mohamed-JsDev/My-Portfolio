@@ -38,7 +38,7 @@ export default function Icons() {
 }
 export function Next(next) {
   return (
-    <div className="bg-[var(--light-span)]   text-white text-4xl  p-2 rounded border border-white">
+    <div className="bg-[var(--light-span)]   text-white text-2xl md:text-4xl  p-2 rounded border border-white">
       <Link href={`./${next.next}`}>
         <ChevronsRight size={35} />
       </Link>
@@ -47,7 +47,7 @@ export function Next(next) {
 }
 export function Back(back) {
   return (
-    <div className="  text-4xl bg-[var(--light-span)] rounded  text-white p-2 ">
+    <div className=" text-2xl md:text-4xl bg-[var(--light-span)] rounded  text-white p-2 ">
       <Link href={`./${back.back}`}>
         <ChevronsLeftIcon size={35} />
       </Link>

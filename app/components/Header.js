@@ -90,7 +90,7 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.5 }}
             className="absolute top-16 left-0 w-full bg-[var(--dark-bg)] md:hidden shadow-lg rounded-b-2xl"
           >
             <ul className="flex flex-col gap-4 p-6 text-lg font-semibold">

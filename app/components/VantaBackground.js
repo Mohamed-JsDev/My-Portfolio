@@ -30,15 +30,11 @@ const VantaBackground = ({ children }) => {
 
     if (!vantaEffect.current) {
       vantaEffect.current = NET(vantaOptions);
-    } else if (
-      vantaEffect.current &&
-      typeof vantaEffect.current.setOptions === "function"
-    ) {
+    } else if (typeof vantaEffect.current.setOptions === "function") {
       try {
         vantaEffect.current.setOptions(vantaOptions);
       } catch (error) {
         console.error("Failed to update Vanta options:", error);
-
         vantaEffect.current.destroy();
         vantaEffect.current = NET(vantaOptions);
       }
@@ -55,7 +51,15 @@ const VantaBackground = ({ children }) => {
   return (
     <div
       ref={vantaRef}
-      style={{ width: "100%", height: "99.9vh", position: "relative" }}
+      style={{
+        width: "100%",
+        minHeight: "100%",
+        height: "auto",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        zIndex: -1,
+      }}
     >
       {children}
     </div>

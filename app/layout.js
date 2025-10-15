@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${poppins.variable}`}>
       <body className={`${poppins.variable}`}>
         <ThemeProvider>
-          <VantaBackground>
+          <VantaBackground id="vanta-bg">
             <Header />
             <div className="flex z-50">{children}</div>
           </VantaBackground>

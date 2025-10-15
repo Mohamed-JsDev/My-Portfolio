@@ -17,6 +17,12 @@
 }
 body {
   font-family: var(--font-poppins), sans-serif;
+  height: 100%;
+  position: relative;
+}
+#vanta-bg {
+  min-height: 100vh;
+  height: 100%;
 }
 .open-animation div {
   animation: openFromCenter 5s ease-in-out forwards;
