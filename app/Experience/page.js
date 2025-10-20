@@ -6,7 +6,7 @@ export default function Experience() {
   const timelineData = experience;
   return (
     <div className=" px-2 md:px-4 lg:px-8 flex justify-center align-center">
-      <div className=" w-full md:w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px:2 md:px-6 lg:px-8 shadow-2xl shadow-black   z-50 rounded-lg">
+      <div className=" w-[calc(100%-10px)] md:w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px:2 md:px-6 lg:px-8 shadow-2xl shadow-black   z-50 rounded-lg">
         <p className=" text-center text-gray-800 text-sm md:text-xl font-semibold border-x-2 border-[var(--main-color)]  rounded-lg sticky  top-0 left-2  w-full bg-white p-4 z-60 shadow-2xl shadow-black">
           My personal joureny
         </p>
@@ -22,14 +22,13 @@ export default function Experience() {
             />
           ))}
         </div>
-        <div className="absolute bottom-10 left-30">
+        <div className="absolute bottom-2 md:bottom-10 left-5 md:left-30">
           <Back back="About" />
         </div>
-        <div className="absolute bottom-10 right-30">
+        <div className="absolute  bottom-2 md:bottom-10 right-5 md:right-30 ">
           <Next next="Skills" />
         </div>
       </div>
     </div>
   );
 }
-// <span className=" w-8 p-2  rounded-full bg-black border-2 border-amber-400 "></span>

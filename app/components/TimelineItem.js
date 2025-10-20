@@ -14,7 +14,7 @@ export default function TimelineItem({
     <div className="flex w-full mt-2 items-center justify-center space-x-2 md:space-x-2 lg:space-x-4 relative">
       {/* date*/}
       <div
-        className={` flex-col space-y-2 md:space-y-4 lg:space-y-8 justify-center h-full text-md md:text-lg font-semibold  ${
+        className={` flex-col space-y-2 md:space-y-4 lg:space-y-8 justify-center h-full text-sm md:text-md md:text-lg font-semibold sm:ps-1  ${
           theme === "light" ? "  text-gray-700  " : "text-[var(--dark-text)] "
         } `}
       >
