@@ -21,18 +21,18 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="px-8 flex justify-center align-center w-screen"
+      className="px-1 md:px-8 flex justify-center align-center w-screen"
     >
-      <div className="container mx-auto  w-5/6 h-[calc(100vh-105px)] overflow-y-auto pb-4 px-8 shadow-2xl shadow-black z-50 rounded-lg">
+      <div className="container mx-auto w-[calc(100%-20px)]  md:w-5/6 h-[calc(100vh-105px)] overflow-y-auto pb-4 px-8 shadow-2xl shadow-black z-50 rounded-lg">
         <h2
           className={`text-3xl md:text-4xl font-bold text-center mb-12 ${
             theme === "light" ? "text-gray-800" : "text-white"
           }`}
         >
-          My <span className="text-[var(--main-color)]">Skills</span>
+          My <span className="text-[var(--main-color)] ">Skills</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
           {skillsData.map((skill, index) => (
             <SkillCard
               key={index}
@@ -55,7 +55,7 @@ export default function Skills() {
 
 const SkillCard = ({ name, level, icon }) => {
   return (
-    <div className="bg-[var(--dark-bg)] p-6 rounded-xl shadow-lg hover:shadow-[var(--main-color)] transition-all duration-300">
+    <div className="bg-[var(--dark-bg)] p-4 md:p-6 rounded-xl shadow-lg hover:shadow-[var(--main-color)] transition-all duration-300">
       <div className="flex items-center mb-4">
         <div className="bg-purple-100  p-2 rounded-full mr-4">
           <img
@@ -67,7 +67,7 @@ const SkillCard = ({ name, level, icon }) => {
             }}
           />
         </div>
-        <h3 className="text-xl font-semibold text-white">{name}</h3>
+        <h3 className="text-lg md:text-xl font-semibold text-white">{name}</h3>
       </div>
       <div className="w-full bg-gray-700 rounded-full h-2.5">
         <div
