@@ -23,7 +23,7 @@ export default function ProjectCard({
   image,
 }) {
   return (
-    <div className="group text-white bg-zinc-900 p-4 rounded-xl shadow-md shadow-black hover:shadow-lg transition flex flex-col ">
+    <div className="group text-white bg-zinc-900 p-2 md:p-4 rounded-xl shadow-md shadow-black hover:shadow-lg transition flex flex-col ">
       <div className="relative w-full h-40 rounded-lg overflow-hidden mb-4">
         <Image
           src={`/images/${image}`}

@@ -28,11 +28,11 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="px-8 flex justify-center align-center w-screen "
+      className="px-2 md:px-4 lg:px-8 flex justify-center align-center w-screen "
     >
-      <div className="container mx-auto  w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-8 shadow-2xl shadow-black   z-50 rounded-lg">
+      <div className="container mx-auto  sm:w-[calc(100%-20px)] md:w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-4 lg:px-8 shadow-2xl shadow-black   z-50 rounded-lg">
         <h2
-          className={`text-3xl md:text-4xl font-bold text-center mb-12  ${
+          className={`sm:text-lg lg:text-3xl md:text-4xl font-bold text-center mb-12  ${
             theme === "light" ? "text-gray-800" : "text-white"
           } `}
         >
@@ -181,7 +181,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-30">
+        <div className="absolute bottom-10 left-1 md:left-30 ">
           <Back back="Projects" />
         </div>
       </div>

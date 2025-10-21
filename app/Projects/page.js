@@ -14,9 +14,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className=" px-8 flex justify-center align-center w-screen"
+      className=" px-2 md:px-4 lg:px-8 flex justify-center align-center w-screen"
     >
-      <div className=" w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-8 shadow-2xl shadow-black   z-50 rounded-lg">
+      <div className=" w-[calc(100%-10px)] h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-4 lg:px-8 shadow-2xl shadow-black   z-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-[var(--main-color)] mb-8">
           My Projects
         </h2>
@@ -26,7 +26,7 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`px-4 py-2 rounded-full font-medium
+              className={`px-2 md:px-4 py-2 rounded-full font-medium
                 ${
                   active === cat
                     ? "bg-blue-600 text-white"
@@ -57,10 +57,10 @@ export default function Projects() {
             view more
           </a>
         </button>
-        <div className="absolute bottom-10 left-30">
+        <div className="absolute bottom-2 md:bottom-10 left-10 md:left-30 ">
           <Back back="Skills" />
         </div>
-        <div className="absolute bottom-10 right-30">
+        <div className="absolute bottom-2 md:bottom-10 right-10 md:right-30 ">
           <Next next="Contact" />
         </div>
       </div>

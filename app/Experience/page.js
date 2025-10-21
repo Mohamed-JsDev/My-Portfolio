@@ -10,7 +10,7 @@ export default function Experience() {
         <p className=" text-center text-gray-800 text-sm md:text-xl font-semibold border-x-2 border-[var(--main-color)]  rounded-lg sticky  top-0 left-2  w-full bg-white p-4 z-60 shadow-2xl shadow-black">
           My personal joureny
         </p>
-        <div className="text-center min-h-full lg:pt-8 lg:p-4 flex flex-wrap items-center max-md:flex-col flex-row justify-between">
+        <div className="text-center min-h-full ps-1 pe-2 lg:pt-8 lg:p-4 flex flex-wrap items-center max-md:flex-col flex-row justify-between">
           {timelineData.map((item, index) => (
             <TimelineItem
               key={index}
