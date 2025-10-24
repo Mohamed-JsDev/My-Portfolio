@@ -32,7 +32,7 @@ export default function Contact() {
     >
       <div className="container mx-auto  sm:w-[calc(100%-20px)] md:w-5/6 h-[calc(100vh-105px)] overflow-y-auto  pb-4 px-4 lg:px-8 shadow-2xl shadow-black   z-50 rounded-lg">
         <h2
-          className={`sm:text-lg lg:text-3xl md:text-4xl font-bold text-center mb-12  ${
+          className={`text-2xl lg:text-3xl md:text-4xl font-bold text-center mb-4 lg:mb-10 md:mt-2  ${
             theme === "light" ? "text-gray-800" : "text-white"
           } `}
         >
@@ -41,7 +41,7 @@ export default function Contact() {
 
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-1/2 bg-[var(--dark-bg)] p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">
+            <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-6 text-gray-800 dark:text-white">
               Contact Info
             </h3>
 
@@ -113,7 +113,7 @@ export default function Contact() {
           </div>
 
           <div className="lg:w-1/2 bg-[var(--dark-bg)]  p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6 text-white">
+            <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-6 text-white">
               Send Me a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -181,7 +181,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1 md:left-30 ">
+        <div className="absolute bottom-5 left-1 md:left-30 ">
           <Back back="Projects" />
         </div>
       </div>

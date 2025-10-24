@@ -13,7 +13,7 @@ export default function Main() {
             : "   rounded-4xl  text-[var(--dark-text)]"
         } }`}
       >
-        <div>
+        <div className="max-md:ps-2">
           <h2 className="text-xl md:text-4xl ">
             Hi, I'm <br />
             <span className="pt-5 poppins  text-[var(--main-color)] font-bold text-3xl md:text-6xl text-shadow-2xs text-shadow-white">
@@ -34,9 +34,9 @@ export default function Main() {
             interfaces of the future with JavaScript... From React to Next.js, I
             create unforgettable experiences."
           </p>
-          <div className="mt-8  flex  w-full gap-2 text-sm md:text-2xl">
+          <div className="mt-8  flex  w-full gap-2 text-sm md:text-2xl justify-around items-center ">
             <button
-              className={`p-1 md:p-2 me-2 rounded-2xl w-2/5 transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
+              className={`p-2 md:p-2 me-2 rounded-2xl w-2/5 transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
     ${
       theme === "light"
         ? "bg-gradient-to-l from-blue-500 to-indigo-950 text-white hover:bg-transparent hover:bg-clip-text hover:text-transparent hover:from-blue-500 hover:to-indigo-950 hover:shadow-black hover:transition-all hover:duration-500 "

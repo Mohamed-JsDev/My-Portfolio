@@ -42,10 +42,10 @@ export default function Skills() {
             />
           ))}
         </div>
-        <div className="absolute bottom-10 left-30">
+        <div className="absolute -bottom-5 md:bottom-10 left-5 lg:left-30">
           <Back back="Experience" />
         </div>
-        <div className="absolute bottom-10 right-30">
+        <div className="absolute -bottom-5 md:bottom-10 right-5  lg:right-30">
           <Next next="Projects" />
         </div>
       </div>

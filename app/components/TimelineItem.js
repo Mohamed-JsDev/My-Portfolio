@@ -9,7 +9,6 @@ export default function TimelineItem({
   certification,
 }) {
   const { theme } = useTheme();
-  console.log(theme);
   return (
     <div className="flex w-ful  mt-2 items-center justify-center sm:space-x-1 md:space-x-2 lg:space-x-4 relative">
       {/* date*/}

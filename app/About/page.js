@@ -152,10 +152,10 @@ export default function About() {
             </button>
           </a>
         </section>
-        <div className="absolute  -bottom-10 left-30">
+        <div className="absolute  bottom-2 left-5 lg:left-30">
           <Back back="/" />
         </div>
-        <div className="absolute -bottom-10 right-30">
+        <div className="absolute  bottom-2 right-5 lg:right-30">
           <Next next="Experience" />
         </div>
       </div>
