@@ -8,7 +8,7 @@ export default function About() {
   const path = "/image_22.png";
   return (
     <div className=" px-4 pb-8  h-full  ">
-      <div className=" text-center  h-full pb-18   lg:pt-8 lg:p-4 flex flex-wrap gap-2  items-center flex-col md:flex-row  md:justify-between lg:justify-around shadow-2xl shadow-black   z-50 ">
+      <div className=" text-center  h-full lg:pb-48   lg:pt-8 lg:p-4 flex flex-wrap gap-2  items-center flex-col md:flex-row  md:justify-between lg:justify-around shadow-2xl shadow-black   z-50 ">
         {/* CRAD INFO */}
         <h1
           className={`  pb-4 w-full  text-4xl font-semibold capitalize ${
@@ -19,7 +19,7 @@ export default function About() {
           My <span className="text-[var(--main-color)]">Introduction</span>
         </h1>
         <section
-          className={`  px-2 w-fit  rounded  shadow-2xl shadow-black py-5 font-semibold text-start flex-col justify-center items-center    ${
+          className={`  px-2 w-full lg:w-fit  rounded  lg:shadow-2xl py-5 font-semibold text-start max-sm:flex-col md:flex lg:flex-col justify-center items-center gap-4    ${
             theme === "light"
               ? "  text-[var(--light-text)] shadow-black "
               : " text-white  rounded-4xl   shadow-white   "
@@ -30,31 +30,36 @@ export default function About() {
             alt="media"
             width={250}
             height={200}
-            className="bg-[var(--main-color)] rounded mb-2"
+            className=" max-sm:w-full bg-[var(--main-color)] rounded mb-2"
           />
-          <h3>Mohamed Saied Alshafe </h3>
-          <p className="flex text-sm text-gray-400 text-shadow-2xs text-shadow-black  ">
-            <Mail className="text-[var(--main-color)] mt-1 " size={15} /> :
-            elm06542@gmail.com
-          </p>
-          <p className="flex text-sm text-gray-400 text-shadow-2xs text-shadow-black ">
-            <MapPinCheck className="text-[var(--main-color)] mt-1 " size={15} />{" "}
-            : 6th of October
-          </p>
-          <Icons />
-          <a href="https://wa.me/201032721974" target="_blank">
-            <button
-              className={` w-full p-2  rounded-2xl  transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
+          <div>
+            <h3>Mohamed Saied Alshafe </h3>
+            <p className="flex text-sm text-gray-400 text-shadow-2xs text-shadow-black  ">
+              <Mail className="text-[var(--main-color)] mt-1 " size={15} /> :
+              elm06542@gmail.com
+            </p>
+            <p className="flex text-sm text-gray-400 text-shadow-2xs text-shadow-black ">
+              <MapPinCheck
+                className="text-[var(--main-color)] mt-1 "
+                size={15}
+              />{" "}
+              : 6th of October
+            </p>
+            <Icons />
+            <a href="https://wa.me/201032721974" target="_blank">
+              <button
+                className={` w-full p-2  rounded-2xl  transition-all duration-500 ease-in-out hover:scale-105 hover:border hover:shadow-2xl 
     ${
       theme === "light"
         ? "bg-gradient-to-l from-[var(--light-span)] to-[var(--dark-span)]  hover:text-[var(--dark-text)] hover:transition-all hover:duration-500 hover:shadow-black hover:border-white"
         : "bg-gradient-to-l from-blue-500 to-indigo-950 text-white  hover:shadow-white hover:transition-all hover:duration-500 "
     }`}
-            >
-              {" "}
-              Get in Touch
-            </button>
-          </a>
+              >
+                {" "}
+                Get in Touch
+              </button>
+            </a>
+          </div>
         </section>
         {/* INTRO */}
         <section
