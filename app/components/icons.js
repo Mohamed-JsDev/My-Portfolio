@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Github,
   Linkedin,
@@ -9,7 +10,7 @@ import {
   PhoneForwarded,
 } from "lucide-react";
 import Link from "next/link";
-export default function Icons() {
+function Icons() {
   return (
     <ul className="flex w-fit px-4 py-2    text-white ">
       <li className="trans-theme hover:shadow-2xl hover:shadow-black hover:scale-120 hover:text-black hover:bg-white rounded p-1 m-2 bg-[var(--dark-bg)]   ">
@@ -54,3 +55,4 @@ export function Back(back) {
     </div>
   );
 }
+export default React.memo(Icons);

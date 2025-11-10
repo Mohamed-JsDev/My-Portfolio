@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "../context/ThemeContext";
 
-export default function TimelineItem({
+function TimelineItem({
   startDate,
   FinishedDate,
   name,
@@ -58,3 +58,4 @@ export default function TimelineItem({
     </div>
   );
 }
+export default React.memo(TimelineItem);

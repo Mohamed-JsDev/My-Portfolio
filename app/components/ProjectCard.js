@@ -1,4 +1,5 @@
 // components/ProjectCard.jsx
+import React from "react";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
@@ -14,14 +15,7 @@ const techIcons = {
   TypeScript: "/icons/typescript.svg",
 };
 
-export default function ProjectCard({
-  title,
-  description,
-  tech,
-  demo,
-  github,
-  image,
-}) {
+function ProjectCard({ title, description, tech, demo, github, image }) {
   return (
     <div className="group text-white bg-zinc-900 p-2 md:p-4 rounded-xl shadow-md shadow-black hover:shadow-lg transition flex flex-col ">
       <div className="relative w-full h-40 rounded-lg overflow-hidden mb-4">
@@ -31,6 +25,8 @@ export default function ProjectCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           fill
           className="group-hover:scale-115 object-cover"
+          priority={true}
+          quality={75}
         />
       </div>
       <h3 className="text-lg font-semibold text-white">{title}</h3>
@@ -75,3 +71,5 @@ export default function ProjectCard({
     </div>
   );
 }
+// export default ProjectCard;
+export default React.memo(ProjectCard);

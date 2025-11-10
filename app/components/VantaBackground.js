@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import NET from "vanta/dist/vanta.net.min";
@@ -66,4 +68,4 @@ const VantaBackground = ({ children }) => {
   );
 };
 
-export default VantaBackground;
+export default React.memo(VantaBackground);

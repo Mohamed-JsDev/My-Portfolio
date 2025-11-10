@@ -21,22 +21,41 @@ export default function Projects() {
           My Projects
         </h2>
 
-        <div className="flex justify-center gap-4 mb-10 flex-wrap ">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActive(cat)}
-              className={`px-2 md:px-4 py-2 rounded-full font-medium
-                ${
-                  active === cat
-                    ? "bg-blue-600 text-white"
-                    : "bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-300"
-                }
-              `}
-            >
-              {cat === "HTML" ? "HTML & CSS" : cat}
-            </button>
-          ))}
+        <div className="flex flex-col items-center mb-10">
+          {/* main button*/}
+          <div className="flex justify-center w-full mb-2 sm:hidden">
+            {categories.map(
+              (cat) =>
+                active === cat && (
+                  <button
+                    key={cat}
+                    onClick={() => setActive(cat)}
+                    className="rounded-2xl font-medium bg-blue-600 text-white px-8 md:px-4 py-2 opacity-100"
+                  >
+                    {cat === "HTML" ? "HTML & CSS" : cat}
+                  </button>
+                )
+            )}
+          </div>
+
+          {/* all button */}
+          <div className="flex justify-center gap-1 md:gap-4  ">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActive(cat)}
+                className={`rounded-2xl  transition-all
+          ${
+            active === cat
+              ? "hidden sm:inline-block bg-blue-600 text-white px-2 py-2"
+              : "bg-zinc-200 max-sm:font-xs text-zinc-800 dark:bg-zinc-700 dark:text-zinc-300 opacity-70 hover:opacity-100 px-2 py-1"
+          }
+        `}
+              >
+                {cat === "HTML" ? "HTML & CSS" : cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 odd:bg-white">
