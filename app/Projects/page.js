@@ -23,7 +23,7 @@ export default function Projects() {
 
         <div className="flex flex-col items-center mb-10">
           {/* main button*/}
-          <div className="flex justify-center w-full mb-2 sm:hidden">
+          <div className="flex justify-center w-full mb-2 md:hidden">
             {categories.map(
               (cat) =>
                 active === cat && (
@@ -37,6 +37,7 @@ export default function Projects() {
                 )
             )}
           </div>
+          <br></br>
 
           {/* all button */}
           <div className="flex justify-center gap-1 md:gap-4  ">
