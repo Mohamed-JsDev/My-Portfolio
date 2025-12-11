@@ -62,7 +62,7 @@ export default function Contact() {
                 </svg>
               }
               title="Email"
-              value="elm06542@gmail.com"
+              value="mohamedalshaie925@gmail.com"
             />
 
             <ContactInfoItem
