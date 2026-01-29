@@ -36,7 +36,7 @@ export default function About() {
             <h3>Mohamed Saied Alshafe </h3>
             <p className="flex text-sm text-gray-400 text-shadow-2xs text-shadow-black  ">
               <Mail className="text-[var(--main-color)] mt-1 " size={15} /> :
-              emohamedalshaie529@gmail.com
+              emohamedalshaie529@gmail.com~
             </p>
             <p className="flex text-sm text-gray-400 text-shadow-2xs text-shadow-black ">
               <MapPinCheck
