@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   compress: true,
-  swcMinify: true,
+
   images: {
     formats: ["image/avif", "image/webp"],
   },
